@@ -52,6 +52,7 @@ function greetingApp() {
         name: '',
         language: 'isiZulu',
         result: '',
+        warning: '',
         greetings: {
             english: 'Hello',
             isiZulu: 'Sawubona',
@@ -60,10 +61,16 @@ function greetingApp() {
         },
 
         generateGreeting() {
-            const greeting = this.greetings[this.language];
-            this.result = `${greeting}, ${this.name}`;
-        }
-    };
+            if (this.name.trim() === '') {
+                this.warning = 'Please enter your name';
+                this.result = '';
+            } else {
+                this.warning = '';
+                const greeting = this.greetings[this.language];
+                this.result = `${greeting}, ${this.name}`;
+            }
+        },
+    }
 }
 
 document.addEventListener('alpine:init', () => {

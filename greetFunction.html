@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="combinedFuction.js"></script>
 </head>
 <body class="bg-gray-100 h-screen flex items-center justify-center">
@@ -52,6 +53,21 @@
             <div id="resultContainer" class="mt-4 font-semibold" x-show="result !== ''">
                 Result: <span x-text="result"></span>
             </div>
+
+            <div id="warningContainer" class="mt-4 text-red-500 font-semibold" x-show="warning !== ''">
+                <span x-text="warning"></span>
+            </div>
+        </div>
+        
+        <div class="flex justify-between mt-6">
+            <a href="index.html" class="flex items-center bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Back
+            </a>
+            <a href="enoughAirtimeFunction.html" class="flex items-center bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded">
+                Next
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
         </div>
     </div>
 </body>
